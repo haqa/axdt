@@ -40,7 +40,7 @@ public class AvmNullImpl extends MinimalEObjectImpl.Container implements AvmNull
 	 */
 	protected AvmNullImpl() {
 		super();
-		qname = AvmQualifiedName.create("Null");
+		qname = (AvmQualifiedName)AvmQualifiedName.create("Null");
 	}
 
 	/**

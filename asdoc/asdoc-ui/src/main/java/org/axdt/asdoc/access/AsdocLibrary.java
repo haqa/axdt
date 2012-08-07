@@ -52,9 +52,9 @@ public class AsdocLibrary extends AvmLibrary {
 			for (AsdocMember member:pack.getMembers())
 				result.add(createDesciption(member.getQualifiedName(), member.eClass(), "avm:/members/"));
 		EClass nsType = AsdocEPackage.eINSTANCE.getAsdocNamespace();
-		result.add(createDesciption(AvmQualifiedName.create("flash","utils","flash_proxy"), nsType,"avm:/members/"));
-		result.add(createDesciption(AvmQualifiedName.create("flash","utils","object_proxy"), nsType, "avm:/members/"));
-		result.add(createDesciption(AvmQualifiedName.create("AS3"), nsType, "avm:/members/"));
+		result.add(createDesciption((AvmQualifiedName)AvmQualifiedName.create("flash","utils","flash_proxy"), nsType,"avm:/members/"));
+		result.add(createDesciption((AvmQualifiedName)AvmQualifiedName.create("flash","utils","object_proxy"), nsType, "avm:/members/"));
+		result.add(createDesciption((AvmQualifiedName)AvmQualifiedName.create("AS3"), nsType, "avm:/members/"));
 		return result;
 	}
 	

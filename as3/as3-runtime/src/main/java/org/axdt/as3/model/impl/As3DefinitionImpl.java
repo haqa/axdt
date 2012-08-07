@@ -185,11 +185,11 @@ public abstract class As3DefinitionImpl extends As3IdentifiableImpl implements A
 		if (name == null) return null;
 		EObject container = getQualifyingParent();
 		if (container instanceof AvmDefinition) {
-			AvmQualifiedName qname = ((AvmDefinition) container).getQualifiedName();
+			AvmQualifiedName qname = (AvmQualifiedName)((AvmDefinition) container).getQualifiedName();
 			if (qname != null)
 				return qname.append(name);
 		}
-		return AvmQualifiedName.create(name);
+		return (AvmQualifiedName)AvmQualifiedName.create(name);
 	}
 
 	/**

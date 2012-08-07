@@ -42,7 +42,7 @@ public class AvmGenericImpl extends MinimalEObjectImpl.Container implements AvmG
 	 */
 	protected AvmGenericImpl() {
 		super();
-		qname = AvmQualifiedName.create("*");
+		qname = (AvmQualifiedName)AvmQualifiedName.create("*");
 	}
 
 	/**

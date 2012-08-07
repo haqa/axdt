@@ -91,7 +91,7 @@ public class AsdocPackageTest extends AsdocElementTest {
 	 */
 	public void testGetFullUri() {
 		assertNull(getFixture().getFullUri());
-		getFixture().setQualifiedName(AvmQualifiedName.create("foo"));
+		getFixture().setQualifiedName((AvmQualifiedName)AvmQualifiedName.create("foo"));
 		assertNull(getFixture().getFullUri());
 		AsdocRoot root = AsdocEFactory.eINSTANCE.createAsdocRoot();
 		root.setBaseUri("file://tmp/test/");
@@ -117,7 +117,7 @@ public class AsdocPackageTest extends AsdocElementTest {
 	public void testGetChildPackage__String() {
 		assertNull(getFixture().getChildPackage("foo"));
 		AsdocPackage child = AsdocEFactory.eINSTANCE.createAsdocPackage();
-		child.setQualifiedName(AvmQualifiedName.create("foo"));
+		child.setQualifiedName((AvmQualifiedName)AvmQualifiedName.create("foo"));
 		child.setParent(getFixture());
 		assertEquals(child,getFixture().getChildPackage("foo"));
 	}
@@ -133,7 +133,7 @@ public class AsdocPackageTest extends AsdocElementTest {
 		assertNull(getFixture().createChildPackage(null));
 		getFixture().setQualifiedName(AvmQualifiedName.EMPTY);
 		AsdocPackage child = AsdocEFactory.eINSTANCE.createAsdocPackage();
-		child.setQualifiedName(AvmQualifiedName.create("foo"));
+		child.setQualifiedName((AvmQualifiedName)AvmQualifiedName.create("foo"));
 		child.setParent(getFixture());
 		AsdocPackage foo = getFixture().createChildPackage("foo");
 		assertSame(child, foo);
@@ -169,7 +169,7 @@ public class AsdocPackageTest extends AsdocElementTest {
 	}
 	public void testGetQualifier() {
 		assertNull(getFixture().getQualifier());
-		getFixture().setQualifiedName(AvmQualifiedName.create("foo"));
+		getFixture().setQualifiedName((AvmQualifiedName)AvmQualifiedName.create("foo"));
 		assertNull(getFixture().getQualifier());
 		getFixture().setQualifiedName(AvmQualifiedName.create("foo","bar","spam"));
 		assertEquals("foo.bar",getFixture().getQualifier());

@@ -4,7 +4,6 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>org.axdt.swc.feature</artifactId>
-	<version>0.0.9-SNAPSHOT</version>
 	<packaging>eclipse-feature</packaging>
 	<parent>
 		<artifactId>org.axdt.swc</artifactId>

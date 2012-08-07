@@ -99,7 +99,7 @@ public abstract class AsdocDefinitionImpl extends AsdocElementImpl implements As
 			if (qname != null)
 				return qname.append(name);
 		}
-		return AvmQualifiedName.create(name);
+		return (AvmQualifiedName)AvmQualifiedName.create(name);
 	}
 
 	public String getCanonicalName() {

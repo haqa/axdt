@@ -41,7 +41,7 @@ public class AvmVoidImpl extends MinimalEObjectImpl.Container implements AvmVoid
 	 */
 	protected AvmVoidImpl() {
 		super();
-		qname = AvmQualifiedName.create("void");
+		qname = (AvmQualifiedName)AvmQualifiedName.create("void");
 	}
 
 	/**
